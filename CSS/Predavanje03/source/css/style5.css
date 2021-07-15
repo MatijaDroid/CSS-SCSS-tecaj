@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+}
+
+div{
+    width: 200px;
+    height: 200px;
+}
+
+.box1{
+    background: cadetblue;
+}
+
+.box2{
+    position: absolute;
+    background: orange;
+    left: 100px;
+    top: 100px;
+    z-index: -1;
+}
+/* apsolutni element gleda poziciju parenta i pozicionira se odnosu na njega, dok se dodaju svojstva element se pozicionira u odnosu na susjede */
+/* tip- apsolute je super za overlay, ako se stave left,right,top i left u 0 automatski se element raširi preko cijelog ekrana a možemo dodati i rgba da se dobije transparency ali isto tako se mora dodati width i height drugom elementu */
+/* vidi samo elemente iznad sebe */
+/* box2 je zbog redosljeda on top i prelazi preko box1 Z index ne radi na static elemntima */
+/* relativan position gleda z index */
+
+
+.container{
+    width: 400px;
+    height: 400px;
+    margin: 2em auto;
+    border: 4px solid #666;
+    position: relative;
+}
+/* margin je ignorirao apsolutnu poziciju */
+
+.box3{
+    background: orchid;
+}
+
+.box4{
+    position: absolute;
+    background: seagreen;
+    right: 0;
+    bottom: 0;
+}
+/* kada pozicija parenta nije relativna child gleda parenta od parenta pa se pozicionira na 0 0 (desni donji kut) */
+/* apsolute position će zadržati poziciju elementa unutar parenta */
+/* parent mora imati relativnu poziciju da bi position right i bottom radili*/
+/* uvijek provjeriti odnos prema drugim rezolucijama ekrana */

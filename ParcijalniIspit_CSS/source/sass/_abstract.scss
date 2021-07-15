@@ -1,0 +1,34 @@
+/* ################# VARIABLES ################# */
+$font-stack: 'Zen Dots', cursive;;
+$light: rgb(241, 241, 241);
+$i:1;
+$pad: 90px 0;
+
+%container-space{
+    padding: {
+        left: 15px;
+        right: 15px;
+    };
+}
+
+/*################## MIXINS ################*/ 
+/*mixin animations*/ 
+
+@mixin box ($margin,$transform,$border,$padding,$width,$text-align){
+    margin: 16px;
+    transform: translateY(-90vh);
+    border: 6px solid $light;
+    padding: $pad;
+    width: 28%;
+    text-align: center;
+}
+@mixin animation($anim) {
+    animation: $anim;
+}
+/*mixin keyframes*/ 
+@mixin keyframes($anim-name) {
+    @keyframes #{$anim-name} {
+      @content;
+    }
+}
+

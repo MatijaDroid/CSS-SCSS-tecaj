@@ -1,0 +1,67 @@
+.container div{
+
+
+/*######### animirani DIV elementi*/ 
+@media screen and(max-width:1600px){
+    @include box;
+
+    &:nth-child(1){
+        background-color: rgba($color: #3a3a3a, $alpha: 0.5);
+        @include animation(anim 1s ease 0.5s 1 forwards)
+        
+    }
+    &:nth-child(2){
+        background: rgba($color: #a52424, $alpha: 0.5);
+        @include animation(anim 1s ease 1.5s 1 forwards)
+    }
+    &:nth-child(3){
+        background:rgba($color: #964f14, $alpha: 0.5);
+        @include animation(anim 1s ease 2.5s 1 forwards)
+    }
+}
+
+@media screen and(max-width:){
+    @include box-mobile{
+        &:nth-child(1){
+            background-color: rgba($color: #3a3a3a, $alpha: 0.5);
+            @include animation(anim 1s ease 0.5s 1 forwards)
+            
+        }
+        &:nth-child(2){
+            background: rgba($color: #a52424, $alpha: 0.5);
+            @include animation(anim-left 1s ease 1.5s 1 forwards)
+        }
+        &:nth-child(3){
+            background:rgba($color: #964f14, $alpha: 0.5);
+            @include animation(anim-right 1s ease 2.5s 1 forwards)
+        }
+    }
+}
+}
+
+@include keyframes(anim) {
+    0% {
+        transform: translatey(-90vh);
+    }
+    100% {
+        transform: translatey(1vh);
+    }
+  }
+
+  @include keyframes(anim-left) {
+    0% {
+        transform: translatex(-90vh);
+    }
+    100% {
+        transform: translatex(1vh);
+    }
+  }
+
+  @include keyframes(anim-right) {
+    0% {
+        transform: translatex(-90vh);
+    }
+    100% {
+        transform: translatex(1vh);
+    }
+  }

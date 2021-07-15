@@ -1,0 +1,32 @@
+.container div{
+    margin: 16px;
+    transform: translateY(-90vh);
+    border: 6px solid $light;
+    padding: $pad;
+    width: 28%;
+    text-align: center;
+
+/*######### animirani DIV elementi*/ 
+    &:nth-child(1){
+        background-color: rgba($color: #3a3a3a, $alpha: 0.5);
+        @include animation(anim 1s ease 0.5s 1 forwards)
+        
+    }
+    &:nth-child(2){
+        background: rgba($color: #a52424, $alpha: 0.5);
+        @include animation(anim 1s ease 1.5s 1 forwards)
+    }
+    &:nth-child(3){
+        background:rgba($color: #964f14, $alpha: 0.5);
+        @include animation(anim 1s ease 2.5s 1 forwards)
+    }
+}
+
+@include keyframes(anim) {
+    0% {
+        transform: translatey(-90vh);
+    }
+    100% {
+        transform: translatey(1vh);
+    }
+  }

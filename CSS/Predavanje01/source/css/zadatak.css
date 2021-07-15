@@ -1,0 +1,11 @@
+#color-red{
+    color: red !important; 
+}
+
+.peru-color{
+    color: peru !important;
+}
+
+/* important nadjačava sve prioritete */
+/* id selektor je jači od class selektora osim kad class selector ima !important */
+

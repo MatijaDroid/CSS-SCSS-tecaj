@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+/* svi elementi koji imaju default margin će imati 0 */
+
+body{
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper{
+    margin: 20px;
+    padding: 20px;
+    border: 1px dashed #666;
+}
+
+.flex-container{
+    /* display: -ms-flexbox; */
+    /* Microsoft Edge/IE */
+    /* display: -moz-box; */
+    /* Mozilla */
+    /* display: -webkit-box; */
+    /* Google Chrome */
+    /* prefixi se moraju korisitit za starije verzije browsera koji ne podružavaju CSS3 */
+    display: flex;
+}
+
+.flex-container > .flex-item{
+    background: #eee;
+    border: 1px solid #666;
+    padding: 1em;
+    width: 100%;
+    /* 100% width se rasporedio na sve elemente, bolje ne koristit fiksne vrijednosti */
+    /* da stavio flex-basis na 100% dobijemo istu stvar kao width 100%, koristiti width i basis nema smisla  */
+    /* ne stavljati width sam na tipa 20% jer se može javiti problem kod smanjenja broja elementa, bolje je staviti na 100% i da basis sam odradi posao oko djeljenja max širine */
+    /* radi automatizmom jer je default no-wrap */
+    /* kad je no wrap elementi neće moći ići u novi red */
+}
+
+.flex-container.flex-wrap{
+    flex-wrap: wrap;
+    /* elementi jedan ispod drugoga */
+    /* wrap obavezno upaliti kada radimo grid! */
+}
+
+.flex-container.flex-wrap > .flex-item{
+    flex-basis: 100%;
+    /* kad je basis na 20% sve će iteme smanjiti na 20% tj na postotak koji upišemo*/
+    /* sa wrapom svejedno je korisitmo li height ili basis */
+    /* orientation je row a ne column jer je width 100% tj flex-basis: 100% */
+}
+
+
+.flex-container.flex-direction{
+    flex-direction: column;
+}
+
+.flex-container.flex-direction > .flex-item{
+    width: 50%;
+    /* kada je flex-direction column, flex-basis djeluje na visinu elementa a ne na njegovu širinu */
+    flex-basis: 100%;
+}
+
+.flex-container.flex-justify{
+    justify-content: space-between;
+}
+
+.flex-container.flex-justify > .flex-item{
+    flex-basis: 15%;
+}
+
+.flex-container.flex-align-items{
+    height: 300px;
+    align-items: center;
+    /* pozicionira po vertikalnoj osi */
+}
+
+.flex-container.flex-align-items > .flex-item{
+    flex-basis: 100%;
+}
+
+
+.flex-container.flex-align-items{
+    height: 300px;
+    align-items: center;
+    /* pozicionira po vertikalnoj osi */
+}
+
+.flex-container.flex-align-items > .flex-item{
+    flex-basis: 100%;
+}
+
+.flex-container.flex-align-content{
+    height: 300px;
+    align-content: space-between;
+    /* pozicionira po vertikalnoj osi */
+    /* wrap mora biti upaljen da možemo elemente stavljati u novi red */
+}
+
+.flex-container.flex-align-content > .flex-item{
+    flex-basis: 33%;
+}
+
+
+.flex-container.flex-align-self{
+    height: 300px;
+    align-items: flex-start;
+}
+/* moramo dodati containeru align-items da ne rastegne elemente na height koji smo postavili nego da ih pozicionira gore */
+
+.flex-container.flex-align-self > .flex-item:nth-child(3){
+    align-self: stretch;
+}
+/* align self isključivo dolazi na element na koji želimo djelovati! */

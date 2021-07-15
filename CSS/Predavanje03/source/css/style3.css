@@ -1,0 +1,32 @@
+body{
+    font-family: Tahoma, sans-serif;
+    font-size: 15px;
+    color: #333;
+    margin: 0;
+    /* 0 netreba jedinicu */
+}
+
+div{
+    background: #eee;
+    border: 1px solid #666;
+    width: 33.33%;
+    display: inline-block;
+    padding: 1em;
+    box-sizing: border-box;
+    margin-left: -4px;
+    margin-bottom: 10px;
+}
+/* javlja se problem praznog prostora između elemenata, ovo nije točno riješenje nego privremene riješenje */
+/* dobar je za korištenje sa li elementima */
+/* div{
+    background: #eee;
+    border: 1px solid #666;
+    width: 33.33%;
+    display: inline;
+    padding: 1em;
+    box-sizing: border-box;
+    margin-left: -4px;
+    margin-bottom: 10px;
+} */
+/* ako se makne -block sa inline to uzrokuje raspad, inline se može korisiti kad ima manje teksta */
+/* kod inline elemenata se praktički javlja puno problema sa marginama */

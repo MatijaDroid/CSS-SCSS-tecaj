@@ -1,0 +1,30 @@
+body{
+    font-family: Tahoma, sans-serif;
+    font-size: 15px;
+    color: #333;
+    margin: 0;
+    /* 0 netreba jedinicu */
+}
+
+body > div{
+    background: #eee;
+    border: 20px solid #999;
+    width: 800px;
+    height: 800px;
+    margin: 2em auto;
+}
+/* kontekstualni selektor koji bira child od body-a znači samo div koji je child */
+body > div > div{
+    width: 50%;
+    height: 50%;
+}
+
+body > div > div:first-child{
+    background: #f66;
+}
+
+body > div > div:last-child{
+    background: #69f;
+    margin-left: auto;
+}
+/* gleda last child od div-a koji je child body-a */

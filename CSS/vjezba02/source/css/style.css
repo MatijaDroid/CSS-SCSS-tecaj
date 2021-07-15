@@ -1,0 +1,19 @@
+body{
+    background-color: #ddd;
+    font-size: 16px;
+    color: #333;
+}
+
+p:first-of-type {
+    background: #ffc url(/images/light-bulb.png) center center / contain no-repeat;
+}
+
+
+p:nth-of-type(3) {
+    background:  
+    url(/images/butterfly.png) no-repeat center left /contain, 
+    url(/images/coffee-cup.png) no-repeat center center /contain, 
+    url(/images/orange.png) no-repeat top right / 100px, 
+     #ccf url(/images/pattern.png) center center;
+    /* zadnji napisani element je pozadinski, svi ispred njega idu on top */
+}

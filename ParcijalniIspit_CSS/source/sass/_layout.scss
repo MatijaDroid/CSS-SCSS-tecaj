@@ -1,0 +1,56 @@
+.container-fluid{
+    width: 100%;
+    max-width: 100%;
+    @extend %container-space;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: {
+        left: -15px;
+        right: -15px;
+    };
+    > [class^="col-"]{
+        @extend %container-space;
+    }
+    // stavlja se through jer je default to 12 to 12 je laž i petlja se ne izvršava
+    @for $i from 1 through 12 {
+        $width: percentage($i/12);
+        .col-#{$i} {
+            width: $width;
+        }
+    }
+    @include respond-to('lg'){
+        @for $i from 1 through 12 {
+            $width: percentage($i/12);
+            .col-lg-#{$i} {
+                width: $width;
+            }
+        }
+    }
+    @include respond-to('md'){
+        @for $i from 1 through 12 {
+            $width: percentage($i/12);
+            .col-md-#{$i} {
+                width: $width;
+            }
+        }
+    }
+    @include respond-to('sm'){
+        @for $i from 1 through 12 {
+            $width: percentage($i/12);
+            .col-sm-#{$i} {
+                width: $width;
+            }
+        }
+    }
+    @include respond-to('xs'){
+        @for $i from 1 through 12 {
+            $width: percentage($i/12);
+            .col-xs-#{$i} {
+                width: $width;
+            }
+        }
+    }
+}

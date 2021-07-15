@@ -1,0 +1,10 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    
+}
+
+// psedu selektor da prije ili poslje elementa dodamo bilo šta (img itd)
+body{
+    font-family: $font-stack;
+    font-size: 100%;
+}

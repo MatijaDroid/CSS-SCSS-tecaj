@@ -1,0 +1,68 @@
+.btn{
+    border: 1px solid $dark;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 20px;
+
+    > i{
+        font-size: 14px;
+    }
+    // icon tag se koristi za sve ikonice
+    // ovisno koji selektor želimo samo dodamo vrijednost ispred + < itd...
+
+    @include when-inside('.pero'){
+        font-size: 30px;
+
+        // &::after{
+        //     content: 'Pero';
+        // }
+
+        @include respond-to('lg'){
+            font-size: 28px;
+        }
+        // lg je argument
+        @include respond-to('md'){
+            font-size: 26px;
+        }
+        @include respond-to('sm'){
+            font-size: 24px;
+        }
+        @include respond-to('xs'){
+            font-size: 22px;
+        }
+    }
+    // kako napraviti .pero .btn, pogledaj abstract
+    // mora se ponovno definirati radi responzivnosti ako je potrebno breakpointove
+
+    &:hover{
+        border-width: 3px;
+    }
+
+    &.btn-blue{
+        background: blue;
+
+        &:hover{
+            background: rgba(92, 125, 197, 0.829);
+        }
+    }
+
+    // @include when-have ('.btn-blue'){
+    //     background: blue;
+    // }
+    // when-have je ista stvar kao ovo gore samo preko mixina
+
+    // uvijek mixin za respozivnost ide na KRAJU
+    @include respond-to('lg'){
+        font-size: 18px;
+    }
+    // lg je argument
+    @include respond-to('md'){
+        font-size: 16px;
+    }
+    @include respond-to('sm'){
+        font-size: 14px;
+    }
+    @include respond-to('xs'){
+        font-size: 12px;
+    }
+}

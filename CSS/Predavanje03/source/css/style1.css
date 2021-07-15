@@ -1,0 +1,47 @@
+body{
+    font-family: Tahoma, sans-serif;
+    font-size: 15px;
+    color: #333;
+    margin: 0;
+    /* 0 netreba jedinicu */
+}
+
+div{
+    background: #eee;
+    text-align: justify;
+}
+
+div:first-of-type{
+    border: 5px solid #666;
+    margin: 32px auto;
+    padding: 32px;
+    width: 300px;
+    
+}
+/* kod blok elementa margin se provlači do ruba body-a pogledaj u inspect */
+
+div:nth-of-type(2){
+    border: 5px dashed #666;
+    margin: 2em 0 2em auto;
+    padding: 2em 4em;
+    width: 25%;
+}
+/* auto margina stavlja relativnu veličinu udnosu na veličinu ekrana */
+
+div:nth-of-type(3){
+    border-right: 5px double #666;
+    margin: 2em 0;
+    padding: 5px 20px 30px 50px;
+    width: 30em;
+}
+
+div:nth-of-type(4){
+    border-top: 5px dashed #666;
+    border-bottom: 5px dotted #666;
+    margin: auto;
+    padding: 10px;
+    width: 80%;
+}
+/* samo auto radi horizontalno ali ne vertikalno ako body nema height */
+/* margine se međusobno ponište što znači da se odmiče samo od elementa a ne od margine - margina veće vrijednosti vrijedi*/
+/* MARGINE SE NE ZBRAJAJU */

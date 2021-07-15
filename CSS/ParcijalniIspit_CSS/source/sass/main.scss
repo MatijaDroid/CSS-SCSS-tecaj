@@ -1,0 +1,18 @@
+// _ se stavlja da compiler ne kompajlira ostale scss-ove nego samo main
+// bitan je redosljed pri generaciji!!
+
+// @import 'abstract';
+// @import 'layout';
+// @import 'base';
+// @import 'pages';
+
+// @import 'abstract','layout','base','pages';
+
+@import 'abstract',
+        'base',
+        'layout',
+        'components',
+        'pages';
+
+// dva različita načina importa
+

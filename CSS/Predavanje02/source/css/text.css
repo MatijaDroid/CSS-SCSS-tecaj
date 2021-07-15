@@ -1,0 +1,34 @@
+html{
+    font-size: 12px;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 2em;
+    /* ne nasljeđuje font-weight jer user agent neda zbog fonta koji je učitan */
+}
+
+.title{
+    color: #333;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.subtitle{
+    font-weight: 300;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}
+/* Ako su px to su apsolutne vrijednosti te ne prihvaća gornji font size(ni ne prihvaća rem,em), ako je % onda se nasljeđuje i povećava za postotak parenta */
+/* Jedinica em je jedinica elementa(parenta) u kojem se trenutno nalazimo - 2em je 2 puta veća  veličina fonta koji se koristi -- em gleda svojeg roditelja i ovisno o tome radi promjenu - parent se može definirati sa pixelima i em radi sa tim tj povećava za vrijednost*/
+/* rem - povećanje se radi ovisno o root elementu koji je html - uzima default veličinu html-a koje je 16px, kada dodamo html u css može se definirati font-size  te tada se mijenja uvećanje rem jedinice*/
+.text{
+    font-weight: 100;
+    color: goldenrod;
+    text-decoration: underline;
+    /* Ovaj dio ne nasljeđuje jer nema font-size */
+    /* nasljeđuje veličinu od parenta (em) */
+}

@@ -1,0 +1,31 @@
+body{
+    font-size: 24px;
+    margin: 0;
+}
+
+p{
+    margin: 24px;
+}
+
+div{
+    width: 200px;
+    height: 200px;
+}
+
+.box1{
+    background: cadetblue;
+}
+
+.box2{
+    background: orange;
+    position: sticky;
+    top: 100px;
+}
+/* top djeluje kao svojstvo na kojem sticky počne djelovati */
+.box3{
+    background: seagreen;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+/* bottom i right promjene poziciju i tamo se fiksira element */
